@@ -39,12 +39,16 @@ class _HomePageState extends State<HomePage> {
   );
   Color lTextColor = Colors.amber[900];
 
-  bool _current = false;
+  List<bool> _current = [false, true, false, false, false];
 
-  void _handleDrawerListTileTapped(bool value) {
-    setState(() {
-      _current = value;
-    });
+  Function _handleDrawerListTileTapped(int index) {
+    handleTap(bool value) {
+      setState(() {
+        _current[index] = value;
+      });
+    }
+
+    return handleTap;
   }
 
   @override
@@ -74,48 +78,29 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       child: ListView(
                         children: <Widget>[
-                          ListTile(
-                            leading: Icon(
-                              Icons.apps_outlined,
-                              color: Colors.white38,
-                              size: 17,
-                            ),
-                            title: Text(
-                              'Dashboard',
-                              style: TextStyle(
-                                color: Colors.white38,
-                              ),
-                            ),
+                          DrawerListTile(
+                            text: "Dashboard",
+                            icon: Icons.apps_outlined,
+                            current: _current[0],
+                            onChanged: _handleDrawerListTileTapped(0),
                           ),
                           DrawerListTile(
-                            current: _current,
-                            onChanged: _handleDrawerListTileTapped,
+                            text: "Schedule",
+                            icon: Icons.format_list_bulleted,
+                            current: _current[1],
+                            onChanged: _handleDrawerListTileTapped(1),
                           ),
-                          ListTile(
-                            leading: Icon(
-                              Icons.check_circle_outline_rounded,
-                              color: Colors.white38,
-                              size: 17,
-                            ),
-                            title: Text(
-                              'Goals',
-                              style: TextStyle(
-                                color: Colors.white38,
-                              ),
-                            ),
+                          DrawerListTile(
+                            text: "Goals",
+                            icon: Icons.check_circle_outline_rounded,
+                            current: _current[2],
+                            onChanged: _handleDrawerListTileTapped(2),
                           ),
-                          ListTile(
-                            leading: Icon(
-                              Icons.settings_rounded,
-                              color: Colors.white38,
-                              size: 17,
-                            ),
-                            title: Text(
-                              'Settings',
-                              style: TextStyle(
-                                color: Colors.white38,
-                              ),
-                            ),
+                          DrawerListTile(
+                            text: "Settings",
+                            icon: Icons.settings_rounded,
+                            current: _current[3],
+                            onChanged: _handleDrawerListTileTapped(3),
                           ),
                         ],
                       ),
