@@ -14,34 +14,49 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
       ),
-      home: MyHomePage(title: 'Kalera'),
+      home: HomePage(title: 'Kalera'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Padding(
+        padding: EdgeInsets.all(25.0),
+        child: Row(
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: Colors.grey[900],
+                ),
+              ),
+              flex: 1,
             ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(left: 25.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: Colors.grey[900],
+                  ),
+                ),
+              ),
+              flex: 8,
+            )
           ],
         ),
       ),
