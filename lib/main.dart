@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'components/DrawerListTile.dart';
 
 void main() {
   runApp(MyApp());
@@ -78,47 +79,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),
-                          InkWell(
-                            onTap: () {
-                              print("tapped");
-                              setState(
-                                () => {
-                                  lTextColor = Color(0xFF4A148C),
-                                  grad = LinearGradient(
-                                    colors: [
-                                      Color(0x004A148C),
-                                      Color(0x154A148C),
-                                    ],
-                                  )
-                                },
-                              );
-                            },
-                            child: AnimatedContainer(
-                              duration: Duration(seconds: 1),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  right: BorderSide(
-                                    color: lTextColor,
-                                    width: 5.0,
-                                  ),
-                                ),
-                                gradient: grad,
-                              ),
-                              child: ListTile(
-                                leading: Icon(
-                                  Icons.format_list_bulleted,
-                                  color: lTextColor,
-                                  size: 17,
-                                ),
-                                title: Text(
-                                  'Schedule',
-                                  style: TextStyle(
-                                    color: lTextColor,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          DrawerListTile(),
                           ListTile(
                             leading: Icon(
                               Icons.check_circle_outline_rounded,
