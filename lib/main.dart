@@ -30,6 +30,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  LinearGradient grad = LinearGradient(
+    colors: [
+      Color(0x00E65100),
+      Color(0x15E65100),
+    ],
+  );
+  Color lTextColor = Colors.amber[900];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,29 +78,43 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border(
-                                right: BorderSide(
-                                  color: Colors.orange[900],
-                                  width: 5.0,
+                          InkWell(
+                            onTap: () {
+                              print("tapped");
+                              setState(
+                                () => {
+                                  lTextColor = Color(0xFF4A148C),
+                                  grad = LinearGradient(
+                                    colors: [
+                                      Color(0x004A148C),
+                                      Color(0x154A148C),
+                                    ],
+                                  )
+                                },
+                              );
+                            },
+                            child: AnimatedContainer(
+                              duration: Duration(seconds: 1),
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  right: BorderSide(
+                                    color: lTextColor,
+                                    width: 5.0,
+                                  ),
                                 ),
+                                gradient: grad,
                               ),
-                              gradient: LinearGradient(colors: [
-                                Color(0x00E65100),
-                                Color(0x15E65100),
-                              ]),
-                            ),
-                            child: ListTile(
-                              leading: Icon(
-                                Icons.format_list_bulleted,
-                                color: Colors.amber[900],
-                                size: 17,
-                              ),
-                              title: Text(
-                                'Schedule',
-                                style: TextStyle(
-                                  color: Colors.amber[900],
+                              child: ListTile(
+                                leading: Icon(
+                                  Icons.format_list_bulleted,
+                                  color: lTextColor,
+                                  size: 17,
+                                ),
+                                title: Text(
+                                  'Schedule',
+                                  style: TextStyle(
+                                    color: lTextColor,
+                                  ),
                                 ),
                               ),
                             ),
