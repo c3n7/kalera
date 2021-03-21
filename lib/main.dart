@@ -39,6 +39,14 @@ class _HomePageState extends State<HomePage> {
   );
   Color lTextColor = Colors.amber[900];
 
+  bool _current = false;
+
+  void _handleDrawerListTileTapped(bool value) {
+    setState(() {
+      _current = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,7 +87,10 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),
-                          DrawerListTile(),
+                          DrawerListTile(
+                            current: _current,
+                            onChanged: _handleDrawerListTileTapped,
+                          ),
                           ListTile(
                             leading: Icon(
                               Icons.check_circle_outline_rounded,
