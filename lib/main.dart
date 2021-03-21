@@ -48,11 +48,29 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: Padding(
                 padding: EdgeInsets.only(left: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Colors.grey[900],
-                  ),
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(
+                        bottom: 25,
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Colors.grey[900],
+                        ),
+                        height: 80,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Colors.grey[900],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               flex: 8,
