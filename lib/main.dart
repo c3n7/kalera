@@ -44,7 +44,9 @@ class _HomePageState extends State<HomePage> {
   Function _handleDrawerListTileTapped(int index) {
     handleTap(bool value) {
       setState(() {
-        _current[index] = value;
+        for (int i = 0; i < _current.length; i++) {
+          _current[i] = i == index ? value : !value;
+        }
       });
     }
 
