@@ -52,14 +52,62 @@ class _HomePageState extends State<HomePage> {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.only(
-                        bottom: 25,
+                        bottom: 20,
                       ),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           color: Colors.grey[900],
                         ),
-                        height: 80,
+                        height: 70,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        bottom: 20,
+                      ),
+                      child: Container(
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: Colors.grey[900],
+                              ),
+                              width: 100,
+                              height: 50,
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    child: Container(),
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
+                                      color: Colors.grey[700],
+                                    ),
+                                    width: 50,
+                                    height: 50,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: Colors.amber[900],
+                              ),
+                              width: 50,
+                              height: 50,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Expanded(
