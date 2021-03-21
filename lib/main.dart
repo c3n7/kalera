@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -41,6 +42,19 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   color: Colors.grey[900],
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(50, 30, 50, 30),
+                      child: SvgPicture.asset(
+                        "assets/vectors/logo.svg",
+                        color: Colors.white,
+                        semanticsLabel: "Logo",
+                        height: 40,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               flex: 1,
