@@ -54,6 +54,78 @@ class _HomePageState extends State<HomePage> {
                         height: 40,
                       ),
                     ),
+                    Expanded(
+                      child: ListView(
+                        children: <Widget>[
+                          ListTile(
+                            leading: Icon(
+                              Icons.apps_outlined,
+                              color: Colors.white38,
+                              size: 17,
+                            ),
+                            title: Text(
+                              'Dashboard',
+                              style: TextStyle(
+                                color: Colors.white38,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(
+                                right: BorderSide(
+                                  color: Colors.orange[900],
+                                  width: 5.0,
+                                ),
+                              ),
+                              gradient: LinearGradient(colors: [
+                                Color(0x00E65100),
+                                Color(0x15E65100),
+                              ]),
+                            ),
+                            child: ListTile(
+                              leading: Icon(
+                                Icons.format_list_bulleted,
+                                color: Colors.amber[900],
+                                size: 17,
+                              ),
+                              title: Text(
+                                'Schedule',
+                                style: TextStyle(
+                                  color: Colors.amber[900],
+                                ),
+                              ),
+                            ),
+                          ),
+                          ListTile(
+                            leading: Icon(
+                              Icons.check_circle_outline_rounded,
+                              color: Colors.white38,
+                              size: 17,
+                            ),
+                            title: Text(
+                              'Goals',
+                              style: TextStyle(
+                                color: Colors.white38,
+                              ),
+                            ),
+                          ),
+                          ListTile(
+                            leading: Icon(
+                              Icons.settings_rounded,
+                              color: Colors.white38,
+                              size: 17,
+                            ),
+                            title: Text(
+                              'Settings',
+                              style: TextStyle(
+                                color: Colors.white38,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
