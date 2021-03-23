@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'components/DrawerListTile.dart';
+import 'components/DayTasks.dart';
 
 void main() {
   runApp(MyApp());
@@ -113,83 +114,83 @@ class _HomePageState extends State<HomePage> {
               flex: 1,
             ),
             Expanded(
-              child: Padding(
-                padding: EdgeInsets.only(left: 25.0),
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(
-                        bottom: 20,
-                      ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          color: Colors.grey[900],
-                        ),
-                        height: 70,
-                      ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 25,
+                      bottom: 20,
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        bottom: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        color: Colors.grey[900],
                       ),
-                      child: Container(
-                        child: Row(
-                          children: <Widget>[
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: Colors.grey[900],
-                              ),
-                              width: 100,
-                              height: 50,
-                              child: Row(
-                                children: <Widget>[
-                                  Expanded(
-                                    child: Container(),
+                      height: 70,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 25,
+                      bottom: 20,
+                    ),
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                              color: Colors.grey[900],
+                            ),
+                            width: 100,
+                            height: 50,
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Container(),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10)),
+                                    color: Colors.grey[700],
                                   ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(10)),
-                                      color: Colors.grey[700],
-                                    ),
-                                    width: 50,
-                                    height: 50,
-                                  ),
-                                ],
-                              ),
+                                  width: 50,
+                                  height: 50,
+                                ),
+                              ],
                             ),
-                            Expanded(
-                              child: Container(),
+                          ),
+                          Expanded(
+                            child: Container(),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                              color: Colors.amber[900],
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: Colors.amber[900],
-                              ),
-                              width: 50,
-                              height: 50,
-                            ),
-                          ],
-                        ),
+                            width: 50,
+                            height: 50,
+                          ),
+                        ],
                       ),
                     ),
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          color: Colors.grey[900],
-                        ),
-                      ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      children: <Widget>[
+                        DayTasks(),
+                        DayTasks(),
+                        DayTasks(),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               flex: 8,
-            )
+            ),
           ],
         ),
       ),
