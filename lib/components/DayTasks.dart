@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'DayTask.dart';
+import 'Task.dart';
 
 class DayTasks extends StatelessWidget {
   @override
@@ -12,13 +12,13 @@ class DayTasks extends StatelessWidget {
         child: Container(
           child: ListView(
             children: <Widget>[
-              DayTask(),
-              DayTask(),
-              DayTask(),
-              DayTask(),
-              DayTask(),
-              DayTask(),
-              DayTask(),
+              Task(),
+              Task(),
+              Task(),
+              Task(),
+              Task(),
+              Task(),
+              Task(),
             ],
           ),
         ),

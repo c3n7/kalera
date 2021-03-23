@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DayTask extends StatelessWidget {
+class Task extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
