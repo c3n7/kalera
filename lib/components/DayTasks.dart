@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'DayTask.dart';
 
 class DayTasks extends StatelessWidget {
   @override
@@ -9,32 +10,15 @@ class DayTasks extends StatelessWidget {
           left: 25,
         ),
         child: Container(
-          child: Column(
+          child: ListView(
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(
-                  bottom: 20,
-                ),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Colors.grey[900],
-                  ),
-                  height: 120,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  bottom: 20,
-                ),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Colors.grey[900],
-                  ),
-                  height: 120,
-                ),
-              ),
+              DayTask(),
+              DayTask(),
+              DayTask(),
+              DayTask(),
+              DayTask(),
+              DayTask(),
+              DayTask(),
             ],
           ),
         ),
