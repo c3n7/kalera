@@ -76,14 +76,59 @@ class DayTask extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(
                   right: 10,
+                  top: 10,
+                  bottom: 10,
                 ),
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: Colors.grey[700],
                   ),
-                  height: 100,
-                  width: 120,
+                  child: Column(
+                    children: <Widget>[
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            bottom: 5,
+                            top: 10,
+                            left: 10,
+                            right: 10,
+                          ),
+                          child: Center(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)),
+                                color: Colors.grey[600],
+                              ),
+                              width: 95,
+                            ),
+                          ),
+                        ),
+                        flex: 1,
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: 5,
+                            bottom: 10,
+                            left: 10,
+                            right: 10,
+                          ),
+                          child: Center(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)),
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ),
+                        ),
+                        flex: 2,
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
