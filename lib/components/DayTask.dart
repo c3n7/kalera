@@ -26,6 +26,47 @@ class DayTask extends StatelessWidget {
                 ),
                 height: 100,
                 width: 120,
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 10,
+                          horizontal: 20,
+                        ),
+                        child: Center(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                        ),
+                      ),
+                      flex: 3,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          bottom: 10,
+                          left: 10,
+                          right: 10,
+                        ),
+                        child: Center(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                        ),
+                      ),
+                      flex: 4,
+                    )
+                  ],
+                ),
               ),
             ),
             Expanded(
