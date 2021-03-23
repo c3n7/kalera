@@ -30,9 +30,11 @@ class DayTask extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 10,
-                          horizontal: 20,
+                        padding: EdgeInsets.only(
+                          bottom: 5,
+                          top: 10,
+                          left: 10,
+                          right: 10,
                         ),
                         child: Center(
                           child: Container(
@@ -49,6 +51,7 @@ class DayTask extends StatelessWidget {
                     Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(
+                          top: 5,
                           bottom: 10,
                           left: 10,
                           right: 10,
@@ -63,7 +66,7 @@ class DayTask extends StatelessWidget {
                           ),
                         ),
                       ),
-                      flex: 4,
+                      flex: 3,
                     )
                   ],
                 ),
