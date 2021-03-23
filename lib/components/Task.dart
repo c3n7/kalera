@@ -94,15 +94,28 @@ class Task extends StatelessWidget {
                             left: 10,
                             right: 10,
                           ),
-                          child: Center(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5)),
-                                color: Colors.grey[600],
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                  color: Colors.grey[600],
+                                ),
+                                width: 95,
                               ),
-                              width: 95,
-                            ),
+                              Expanded(
+                                child: Container(),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                  color: Colors.grey[600],
+                                ),
+                                width: 25,
+                              ),
+                            ],
                           ),
                         ),
                         flex: 1,
