@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'components/DrawerListTile.dart';
 import 'components/DayTasks.dart';
+import 'components/WeekView.dart';
 
 void main() {
   runApp(MyApp());
@@ -214,12 +215,7 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.red,
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 25),
-                          child: Container(
-                            color: Colors.green,
-                          ),
-                        ),
+                        WeekView(),
                         Padding(
                           padding: EdgeInsets.only(left: 25),
                           child: Container(
