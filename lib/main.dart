@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
   );
   Color lTextColor = Colors.amber[900];
 
-  List<bool> _current = [false, true, false, false, false];
+  List<bool> _current = [false, true, false, false, false, false];
 
   Function _handleDrawerListTileTapped(int index) {
     handleTap(bool value) {
@@ -94,16 +94,22 @@ class _HomePageState extends State<HomePage> {
                             onChanged: _handleDrawerListTileTapped(1),
                           ),
                           DrawerListTile(
-                            text: "Goals",
-                            icon: Icons.check_circle_outline_rounded,
+                            text: "Calendar",
+                            icon: Icons.calendar_today_outlined,
                             current: _current[2],
                             onChanged: _handleDrawerListTileTapped(2),
                           ),
                           DrawerListTile(
-                            text: "Settings",
-                            icon: Icons.settings_rounded,
+                            text: "Goals",
+                            icon: Icons.check_circle_outline_rounded,
                             current: _current[3],
                             onChanged: _handleDrawerListTileTapped(3),
+                          ),
+                          DrawerListTile(
+                            text: "Settings",
+                            icon: Icons.settings_rounded,
+                            current: _current[4],
+                            onChanged: _handleDrawerListTileTapped(4),
                           ),
                         ],
                       ),
@@ -179,12 +185,26 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Expanded(
-                    child: Row(
-                      children: <Widget>[
-                        DayTasks(),
-                        DayTasks(),
-                        DayTasks(),
-                      ],
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        left: 25,
+                      ),
+                      child: PageView(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              DayTasks(),
+                              DayTasks(),
+                              DayTasks(),
+                            ],
+                          ),
+                          Expanded(
+                            child: Container(
+                              color: Colors.red,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
