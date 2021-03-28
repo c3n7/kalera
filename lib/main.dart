@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                             children: <Widget>[
                               DayTasks(),
                               DayTasks(),
-                              DayTasks(),
+                              DayTasks(addPadding: false),
                             ],
                           ),
                           Expanded(
