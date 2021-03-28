@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
         for (int i = 0; i < _current.length; i++) {
           _current[i] = i == index ? value : !value;
         }
+        pageController.jumpToPage(index);
       });
     }
 
