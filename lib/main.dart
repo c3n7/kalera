@@ -54,8 +54,20 @@ class _HomePageState extends State<HomePage> {
     return handleTap;
   }
 
+  final PageController pageController = new PageController();
+  int currentPageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
+    pageController.addListener(() {
+      setState(() {
+        currentPageIndex = pageController.page.toInt();
+        for (int i = 0; i < _current.length; i++) {
+          _current[i] = i == currentPageIndex ? true : false;
+        }
+      });
+    });
+
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(25.0),
@@ -186,6 +198,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Expanded(
                     child: PageView(
+                      controller: pageController,
                       children: <Widget>[
                         Row(
                           children: <Widget>[
@@ -194,36 +207,28 @@ class _HomePageState extends State<HomePage> {
                             DayTasks(),
                           ],
                         ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 25),
-                            child: Container(
-                              color: Colors.red,
-                            ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Container(
+                            color: Colors.red,
                           ),
                         ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 25),
-                            child: Container(
-                              color: Colors.green,
-                            ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Container(
+                            color: Colors.green,
                           ),
                         ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 25),
-                            child: Container(
-                              color: Colors.orange,
-                            ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Container(
+                            color: Colors.orange,
                           ),
                         ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 25),
-                            child: Container(
-                              color: Colors.blue,
-                            ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Container(
+                            color: Colors.blue,
                           ),
                         ),
                       ],
