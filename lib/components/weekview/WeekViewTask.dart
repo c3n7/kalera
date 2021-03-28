@@ -5,11 +5,11 @@ class WeekViewTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return TableCell(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 3),
+        padding: EdgeInsets.symmetric(horizontal: 3, vertical: 3),
         child: Container(
-          height: 120,
+          height: 70,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.all(Radius.circular(5)),
             color: Colors.grey[700],
           ),
         ),

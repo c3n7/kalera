@@ -19,6 +19,50 @@ class WeekView extends StatelessWidget {
               WeekViewTask(),
             ],
           ),
+          TableRow(
+            children: <Widget>[
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+            ],
+          ),
+          TableRow(
+            children: <Widget>[
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+            ],
+          ),
+          TableRow(
+            children: <Widget>[
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+            ],
+          ),
+          TableRow(
+            children: <Widget>[
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+              WeekViewTask(),
+            ],
+          ),
         ],
       ),
     );
