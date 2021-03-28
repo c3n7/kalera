@@ -5,7 +5,7 @@ class TimeTableCell extends StatelessWidget {
   Widget build(BuildContext context) {
     return TableCell(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 3, vertical: 0),
+        padding: EdgeInsets.symmetric(horizontal: 3, vertical: 3),
         child: Container(
           height: 20,
           width: 70,
