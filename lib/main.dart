@@ -185,26 +185,48 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                        left: 25,
-                      ),
-                      child: PageView(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              DayTasks(),
-                              DayTasks(),
-                              DayTasks(addPadding: false),
-                            ],
-                          ),
-                          Expanded(
+                    child: PageView(
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            DayTasks(),
+                            DayTasks(),
+                            DayTasks(),
+                          ],
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 25),
                             child: Container(
                               color: Colors.red,
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 25),
+                            child: Container(
+                              color: Colors.green,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 25),
+                            child: Container(
+                              color: Colors.orange,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 25),
+                            child: Container(
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
