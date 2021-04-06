@@ -41,6 +41,8 @@ class WeekView extends StatelessWidget {
           weekRow(),
           weekRow(),
           weekRow(),
+          weekRow(),
+          weekRow(),
         ],
       ),
     );
