@@ -3,6 +3,21 @@ import 'weekview/WeekViewTask.dart';
 import 'weekview/TimeTableCell.dart';
 
 class WeekView extends StatelessWidget {
+  TableRow weekRow() {
+    return TableRow(
+      children: <Widget>[
+        TimeTableCell(),
+        WeekViewTask(),
+        WeekViewTask(),
+        WeekViewTask(),
+        WeekViewTask(),
+        WeekViewTask(),
+        WeekViewTask(),
+        WeekViewTask(),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,66 +35,12 @@ class WeekView extends StatelessWidget {
           8: FlexColumnWidth(),
         },
         children: <TableRow>[
-          TableRow(
-            children: <Widget>[
-              TimeTableCell(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-            ],
-          ),
-          TableRow(
-            children: <Widget>[
-              TimeTableCell(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-            ],
-          ),
-          TableRow(
-            children: <Widget>[
-              TimeTableCell(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-            ],
-          ),
-          TableRow(
-            children: <Widget>[
-              TimeTableCell(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-            ],
-          ),
-          TableRow(
-            children: <Widget>[
-              TimeTableCell(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-              WeekViewTask(),
-            ],
-          ),
+          weekRow(),
+          weekRow(),
+          weekRow(),
+          weekRow(),
+          weekRow(),
+          weekRow(),
         ],
       ),
     );
